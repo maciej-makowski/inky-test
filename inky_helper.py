@@ -100,8 +100,8 @@ def network_connect(SSID, PSK):
         if wlan.status() < 0 or wlan.status() >= 3:
             break
         max_wait -= 1
-        print('waiting for connection...')
-        time.sleep(1)
+        print('Waiting for connection...')
+        time.sleep(1.0)
 
     stop_network_led()
     network_led_pwm.duty_u16(30000)
